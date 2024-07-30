@@ -8,7 +8,9 @@ var raf;
 export const init = async () => {
   const videoElement = document.querySelector('.webcam');
 
+  console.log("Loading model...")
   await blink.loadModel();
+  console.log("Model loaded!")
   await blink.setUpCamera(videoElement);
   loading.value = false
 

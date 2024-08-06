@@ -1,0 +1,25 @@
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    h3 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        align-self: self-start;
+    }
+
+    p {
+        font-size: 50px;
+        text-align: left;
+    }
+
+    img {
+        width: 100px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

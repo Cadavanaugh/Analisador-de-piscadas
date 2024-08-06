@@ -12,13 +12,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@preact/signals-react": "^2.1.0",
     "@tensorflow-models/facemesh": "^0.0.5",
     "@tensorflow/tfjs": "^4.20.0",
     "@tensorflow/tfjs-backend-webgpu": "^4.20.0",
     "blink-detection": "^1.2.1",
+    "plotly.js": "^2.34.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-plotly.js": "^2.6.0",
+    "react-router": "^6.25.1",
     "react-webcam": "^7.2.0"
   },
   "devDependencies": {

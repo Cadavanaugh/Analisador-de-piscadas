@@ -2,17 +2,15 @@ import { signal } from '@preact/signals-react';
 import blink from 'blink-detection/index.js';
 
 export const blinkCount = signal(0);
-export const loading = signal(true)
+export const isLoading = signal(true)
 
 var raf;
 export const init = async () => {
   const videoElement = document.querySelector('.webcam');
 
-  console.log("Loading model...")
   await blink.loadModel();
-  console.log("Model loaded!")
   await blink.setUpCamera(videoElement);
-  loading.value = false
+  isLoading.value = false
 
   var piscadas = []
   const predict = async () => {
@@ -24,7 +22,7 @@ export const init = async () => {
       return value
     });
     let count = piscadas.filter(x => x[0] === true);
-    blinkCount.value = count.length
+    blinkCount.value = count
     
     raf = requestAnimationFrame(predict);
   };

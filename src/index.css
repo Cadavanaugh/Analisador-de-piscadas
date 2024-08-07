@@ -10,9 +10,10 @@ body {
   height: 100vh;
 }
 
+/* Separação de header e main */
 .App {
   display: grid;
-  grid-template-rows: 15% 85%;
+  grid-template-rows: 20% 80%;
 }
 
 header {
@@ -24,29 +25,47 @@ header {
   }
 }
 
+/* Separação de câmera e cards */
 main {
   display: grid;
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 3fr 3fr;
   height: auto;
 }
 
 .stats {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
   padding: 0 15px;
-  background-color: white;
   justify-content: space-between;
   flex-direction: column;
-  row-gap: 20px;
+  gap: 20px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.cam {
+  display: flex;
+  justify-content: center;
 }
 
 .webcam {
-  height: auto;
+  /* height: 100%; */
 }
 
 
 @media (max-width: 1024px) {
+  .App {
+    grid-template-rows: 5% 95%;
+  }
+
   main {
     grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 20px;
   }
 
   .stats {

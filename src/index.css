@@ -30,14 +30,13 @@ main {
   display: grid;
   grid-template-columns: 3fr 3fr;
   height: auto;
+  justify-content: space-around;
 }
 
 .stats {
   display: grid;
   grid-template-rows: 1fr 3fr;
   padding: 0 15px;
-  justify-content: space-between;
-  flex-direction: column;
   gap: 20px;
 }
 
@@ -50,10 +49,6 @@ main {
 .cam {
   display: flex;
   justify-content: center;
-}
-
-.webcam {
-  /* height: 100%; */
 }
 
 
@@ -70,5 +65,16 @@ main {
 
   .stats {
     order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .metrics {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stats {
+    width: 100%;
   }
 }

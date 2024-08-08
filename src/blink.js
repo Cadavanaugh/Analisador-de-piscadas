@@ -4,6 +4,7 @@ import blink from 'blink-detection/index.js';
 export const blinkCount = signal(0);
 export const isLoading = signal(true)
 
+// eslint-disable-next-line no-unused-vars
 var raf;
 export const init = async () => {
   const videoElement = document.querySelector('.webcam');

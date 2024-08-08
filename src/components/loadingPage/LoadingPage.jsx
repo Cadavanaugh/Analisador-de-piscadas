@@ -9,7 +9,7 @@ const LoadingPage = () => {
 
   return (
     <div className='loading-container'>
-      <FontAwesomeIcon icon={faSpinner} spin size='6x'/>
+      <FontAwesomeIcon icon={faSpinner} spin size='6x'style={{animationDuration: '1.5s'}}/>
       <p>Carregando...</p>
     </div>
   )

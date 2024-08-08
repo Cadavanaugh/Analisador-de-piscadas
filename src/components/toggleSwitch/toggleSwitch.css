@@ -19,7 +19,7 @@ label {
 	-webkit-tap-highlight-color: transparent;
 }
 .col {
-	width: 100%;
+	width: 25%;
 	height: 100%;
 }
 .sr {
@@ -289,9 +289,10 @@ label {
     right: 1%;
 
     p {
-        font-size: 30px;
-        font-weight: bold;
+        font-size: 20px;
         color: white;
+        margin-left: 35px;
+        font-weight: lighter;
     }
 }
 

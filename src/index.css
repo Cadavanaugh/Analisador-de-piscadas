@@ -14,7 +14,7 @@ body {
 /* Separação de header e main */
 .App {
   display: grid;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 20vh 75vh;
   justify-content: space-around;
 }
 
@@ -48,6 +48,10 @@ main {
   gap: 20px;
 }
 
+.metrics > .stats-card img {
+  top: 60%;
+}
+
 .cam {
   display: flex;
   justify-content: center;
@@ -78,5 +82,9 @@ main {
 
   .stats {
     width: 100%;
+  }
+
+  .metrics > .stats-card img {
+    top: 50%;
   }
 }

@@ -19,6 +19,11 @@ function App() {
     }, 1000)
     return () => clearInterval(interval);
   }, [])
+
+
+  useEffect(() => {
+    document.body.style.overflow = isLoading.v ? 'hidden' : 'initial'
+  }, [isLoading.v])
   
   return (
     <div className="App">

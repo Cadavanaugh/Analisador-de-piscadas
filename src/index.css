@@ -6,8 +6,9 @@
 }
 
 body {
-  background: #383838;
   height: 100vh;
+  background-color: #383838;
+  transition: .3s;
 }
 
 /* Separação de header e main */

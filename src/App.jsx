@@ -11,6 +11,7 @@ import img123 from '/images/123.png'
 import imgEye from '/images/eye.png'
 import imgStopwatch from '/images/stopwatch.png'
 import imgFire from '/images/fire.png'
+import ToggleSwitch from './components/toggleSwitch/ToggleSwitch.jsx'
 
 function App() {
   const webcamRef = useRef(null)
@@ -33,14 +34,28 @@ function App() {
   }, []);
 
 
+  // Bloquear scroll durante o carregamento
   useEffect(() => {
     document.body.style.overflow = isLoading.v ? 'hidden' : 'initial'
   }, [isLoading.v])
   
+  // Chroma key toggle switch
+  const checkbox = document.querySelector('.switch__input')
+  useEffect(() => {
+    if(checkbox){
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) document.body.style.backgroundColor = '#04F404'
+        else document.body.style.backgroundColor = '#383838'
+      })
+    }
+  }, [checkbox])
+  
+
   return (
     <div className="App">
       <header>
         <h1>Analisador de piscadas</h1>
+        <ToggleSwitch/>
       </header>
       <main>
         <section className='cam'>
